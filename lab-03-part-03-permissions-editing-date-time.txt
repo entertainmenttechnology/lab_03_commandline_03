@@ -1,124 +1,72 @@
-Lab - Permissions, Editing Text, Date and Time
-==========
-Follow the instructions line-by-line.  
+Last login: Fri Apr  1 08:05:29 on ttys001
+Evans-MacBook-Pro:~ evanmozeson$ date
+Fri Apr  1 08:18:15 EDT 2016
+Evans-MacBook-Pro:~ evanmozeson$ cal 2016
+                             2016
 
-* Type in the commands as is, but ignore the beginning prompt.  
-* Enter, tab, up and down are represented by <ENTER><TAB>,<UP> and <DOWN>.  
-* "No output" or "nothing happens" are valid answers to any of the questions.
-==========
-
-
-==========
-We're going to be writing a shell script.  First, though... let's figure out what day and time it is!
-==========
-
-==========
-1. What day and time is it?
-
-What command did you use, and what was its output?
-----------
-
-
-
-==========
-2. Print out a calendar for this month.
-
-What command did you use, and what was its output?
-----------
-
-
-
-==========
-3. Go to your home directory.  Verify that you're in your home directory.
-
-What commands did you use to do this?
-----------
-
-
-
-==========
-4. Create an empty file called copy_to_backup.sh.  Verify that the file exists.
-
-What commands did you use to do this?
-----------
-
-
-
-==========
-5. What are the permissions on your copy_to_backup.sh.
-
-What command did you use to find the permissions?
-----------
-
-
-
-==========
-6. Change the permissions so that this file is executable by the user.  Verify the new permissions.
-
-What commands did you use to do this?  What was the output?
-----------
-
-
-
-==========
-7. Try executing the file!
-
-$ ./copy_to_backup.sh
-
-What command did you use to try to execute the file?  What happens?
-----------
-
-
-
-==========
-8. Open the file with nano
-
-What command did you use to do this?
-----------
-
-
-
-==========
-9. In your file, write the following commands:
-
-a. create a directory called backup in your home directory... use the -p flag!
-b. copy all of the files txt files in the current directory to the backup directory (use *.txt)
-c. print out "I'm done backing up"
-
-Write out the code in your file below...
-----------
-
-
-
-==========
-10. Create a directory in your home called test
-----------
-==========
-11. Go into that directory and create two empty files... 1.txt and 2.txt
-
-What commands did you use to do this?
-----------
-
-
-
-==========
-12. Move the script that you created into this directory.
-
-What commands did you use to do this?
-----------
-
-
-
-==========
-13. Run your script.
-
-What commands did you use to do this?
-----------
-
-
-
-==========
-14. Verify that a backup folder was created in your home directory... with copies of the files present.
-
-What commands did you use to do this?  Show the output.
-----------
+      January               February               March
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                1  2      1  2  3  4  5  6         1  2  3  4  5
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   6  7  8  9 10 11 12
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  13 14 15 16 17 18 19
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  20 21 22 23 24 25 26
+24 25 26 27 28 29 30  28 29                 27 28 29 30 31
+31                                          
+       April                  May                   June
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                1  2   1  2  3  4  5  6  7            1  2  3  4
+ 3  4  5  6  7  8  9   8  9 10 11 12 13 14   5  6  7  8  9 10 11
+10 11 12 13 14 15 16  15 16 17 18 19 20 21  12 13 14 15 16 17 18
+17 18 19 20 21 22 23  22 23 24 25 26 27 28  19 20 21 22 23 24 25
+24 25 26 27 28 29 30  29 30 31              26 27 28 29 30
+                                            
+        July                 August              September
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                1  2      1  2  3  4  5  6               1  2  3
+ 3  4  5  6  7  8  9   7  8  9 10 11 12 13   4  5  6  7  8  9 10
+10 11 12 13 14 15 16  14 15 16 17 18 19 20  11 12 13 14 15 16 17
+17 18 19 20 21 22 23  21 22 23 24 25 26 27  18 19 20 21 22 23 24
+24 25 26 27 28 29 30  28 29 30 31           25 26 27 28 29 30
+31                                          
+      October               November              December
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa
+                   1         1  2  3  4  5               1  2  3
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   4  5  6  7  8  9 10
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  11 12 13 14 15 16 17
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  18 19 20 21 22 23 24
+23 24 25 26 27 28 29  27 28 29 30           25 26 27 28 29 30 31
+30 31                                       
+Evans-MacBook-Pro:~ evanmozeson$ ~cd
+-bash: ~cd: command not found
+Evans-MacBook-Pro:~ evanmozeson$ ~/Users/Desktop/Evan
+-bash: /Users/evanmozeson/Users/Desktop/Evan: No such file or directory
+Evans-MacBook-Pro:~ evanmozeson$ /Users/Desktop/Evan
+-bash: /Users/Desktop/Evan: No such file or directory
+Evans-MacBook-Pro:~ evanmozeson$ ~./Users/Desktop/Evan
+-bash: ~./Users/Desktop/Evan: No such file or directory
+Evans-MacBook-Pro:~ evanmozeson$ ~cd
+-bash: ~cd: command not found
+Evans-MacBook-Pro:~ evanmozeson$ /Users/evanmozeson/Users/Desktop/Evan
+-bash: /Users/evanmozeson/Users/Desktop/Evan: No such file or directory
+Evans-MacBook-Pro:~ evanmozeson$ /Users/evanmozeson/Desktop/Evan
+-bash: /Users/evanmozeson/Desktop/Evan: is a directory
+Evans-MacBook-Pro:~ evanmozeson$ copy_to_backup.sh
+-bash: copy_to_backup.sh: command not found
+Evans-MacBook-Pro:~ evanmozeson$ copy_to_backup.sh
+-bash: copy_to_backup.sh: command not found
+Evans-MacBook-Pro:~ evanmozeson$ mkdir copy_to_backup.sh
+Evans-MacBook-Pro:~ evanmozeson$ mkdir copy_to_backup.sh
+mkdir: copy_to_backup.sh: File exists
+Evans-MacBook-Pro:~ evanmozeson$ chown :admins copy_to_backup.sh
+chown: admins: illegal group name
+Evans-MacBook-Pro:~ evanmozeson$ ./copy_to_backup.sh
+-bash: ./copy_to_backup.sh: is a directory
+Evans-MacBook-Pro:~ evanmozeson$ nano copy_to_backup.sh
+Evans-MacBook-Pro:~ evanmozeson$ mkdir test
+mkdir: test: File exists
+Evans-MacBook-Pro:~ evanmozeson$ nano test
+Evans-MacBook-Pro:~ evanmozeson$ #!/bin/bash
+Evans-MacBook-Pro:~ evanmozeson$ # Prints "Hello world."
+Evans-MacBook-Pro:~ evanmozeson$ echo "Hello world."
+Hello world.
+Evans-MacBook-Pro:~ evanmozeson$ 
